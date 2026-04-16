@@ -1,11 +1,11 @@
 import React from 'react'
 
-export default function HeaderTop() {
+export default function HeaderTop({setToggle, toggle}) {
   return (
    <div className="header-top">
-                <div className="header-top-menu">
+                <div className="header-top-menu" onClick={()=> setToggle(prev => !prev)}>
 
-                    <i className="bi bi-list"></i>
+                    {toggle ? <i className="bi bi-x-lg"></i>: <i className="bi bi-list"></i>}
 
                 </div>
 
